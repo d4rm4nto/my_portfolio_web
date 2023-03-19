@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import BannerSection from './components/BannerSection';
+import NavigationBar from './components/NavigationBar'
 import './App.css';
+import '../src/components/style/landingpage.css'
+import AboutMe from './components/AboutMe';
+import MyPortfolio from './components/MyPortfolio';
+import Skill from './components/Skill';
+import Blog from './components/Blog';
+import KontakSaya from './components/KontakSaya';
+import Footer from './components/Footer';
+import 'react-circular-progressbar/dist/styles.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // home
+    <div className="bg-slate-900">
+      <div className="intro">
+        <NavigationBar />
+        <BannerSection />
+      </div>
+      <div className='tentang'>
+        <AboutMe />
+      </div>
+      <div className='bg-slate-800'>
+        <MyPortfolio />
+      </div>
+      <div className=''>
+        <Skill />
+      </div>
+      <div className=''>
+        <Blog />
+      </div>
+      <div className='bg-slate-800'>
+        <KontakSaya />
+      </div>
+      <div className=''>
+        <Footer />
+      </div>
+      {/* home */}
+
     </div>
   );
 }
